@@ -47,7 +47,8 @@ E
 F
 
 ## ----construct-----------------------------------------------------------
-DF = data.frame(k1=rep(letters[1:3],2), k2=rep(letters[24:25],3), v=1:6)[-6,]
+DF = data.frame(k1=base::rep(letters[1:3],2),
+                k2=base::rep(letters[24:25],3), v=1:6)[-6,]
 construct(v ~ k1 + k2, data=DF)
 
 ## ----mask----------------------------------------------------------------
