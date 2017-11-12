@@ -11,5 +11,8 @@ test_that("mask", {
 
     Zref = structure(c(TRUE, TRUE, FALSE, TRUE, FALSE, TRUE), .Dim = c(3L,
     2L), .Dimnames = list(c("a", "b", "c"), c("e1", "e2")))
-    expect_equal(Z, Zref)
+
+    expect_equal(Zref, Z)
+    expect_equal(Zref, mask(F, along=2))
+    expect_equal(Zref, t(mask(F, along=1)))
 })
