@@ -13,22 +13,21 @@ opts_chunk$set(
   concordance = TRUE
 )
 
-## ----namespace, eval=FALSE-----------------------------------------------
-#  # example using `modules`
-#  ar = modules::import_package(narray)
-#  ar$myfunction(...)
-
-## ----lib, include=FALSE--------------------------------------------------
 library(narray)
+
+## ----namespace, eval=FALSE-----------------------------------------------
+#  # example referencing the package namespace
+#  # do not load the package with 'library(...)' here
+#  narray::stack(...)
 
 ## ----stack---------------------------------------------------------------
 A = matrix(1:4, nrow=2, ncol=2, dimnames=list(c('a','b'),c('x','y')))
 B = matrix(5:6, nrow=2, ncol=1, dimnames=list(c('b','a'),'z'))
 
-C = stack(list(A, B), along=2)
+C = stack(A, B, along=2)
 C
 
-D = stack(list(m=A, n=C), along=3) # we can also introduce new dimensions
+D = stack(m=A, n=C, along=3) # we can also introduce new dimensions
 D
 
 ## ----split---------------------------------------------------------------
@@ -37,6 +36,11 @@ split(C, along=2, subsets=c('s1','s1','s2'))
 ## ----map-----------------------------------------------------------------
 map(C, along=2, function(x) x*2) # return same length vector
 map(C, along=2, mean, subsets=c('s1', 's1', 's2')) # summarize each subset to scalar
+
+## ----lambda--------------------------------------------------------------
+dot = function(x, y) sum(x * y)
+lambda(~ dot(A, B), along=c(A=1, B=2))
+lambda(~ dot(A, B), along=c(A=1, B=2), simplify=FALSE)
 
 ## ----intersect-----------------------------------------------------------
 E = matrix(1:6, nrow=3, dimnames=list(c('a','b','d'), c('x','y')))
