@@ -3,13 +3,14 @@
 #' @param ...         N-dimensional arrays, or a list thereof
 #' @param along       Which axis arrays should be stacked on (default: new axis)
 #' @param fill        Value for unknown values (default: \code{NA})
-#' @param keep_empty  Keep empty elements when stacking (default: FALSE)
 #' @param drop        Drop unused dimensions (default: FALSE)
-#' @param fail_if_empty  Stop if no arrays left after removing empty elements
+#' @param keep_empty  Keep empty elements when stacking (default: FALSE)
+#' @param allow_overwrite  Overwrite values if more arrays share same key
+#' @param fail_if_empty    Stop if no arrays left after removing empty elements
 #' @return            A stacked array, either n or n+1 dimensional
 #' @export
-stack = function(..., along=length(dim(arrayList[[1]]))+1, fill=NA,
-                 drop=FALSE, keep_empty=FALSE, fail_if_empty=TRUE) {
+stack = function(..., along=length(dim(arrayList[[1]]))+1, fill=NA, drop=FALSE,
+                 keep_empty=FALSE, allow_overwrite=FALSE, fail_if_empty=TRUE) {
 
     arrayList = list(...)
     if (length(arrayList) == 1 && is.list(arrayList[[1]]))
@@ -73,6 +74,7 @@ stack = function(..., along=length(dim(arrayList[[1]]))+1, fill=NA,
 
     # fill each result matrix slice with matched values of arrayList
     offset = 0
+    pb = pb(length(arrayList))
     for (i in seq_along(arrayList)) {
         dm = dimnames(arrayList[[i]], null_as_integer=TRUE)
         if (stack_offset) {
@@ -85,12 +87,13 @@ stack = function(..., along=length(dim(arrayList[[1]]))+1, fill=NA,
         else {
             # do not overwrite values unless empty or the same
             slice = do.call("[", c(list(result), dm, drop=FALSE))
-            if (!all(slice==fill | is.na(slice) | slice==arrayList[[i]]))
+            if (!allow_overwrite && (!all(slice==fill | is.na(slice) | slice==arrayList[[i]])))
                 stop("value aggregation not allowed, stack along new axis+summarize after")
         }
 
         # assign to the slice if there are any values in it
         result = do.call("[<-", c(list(result), dm, list(arrayList[[i]])))
+        pb$tick()
     }
 
     drop_if(result, drop)
