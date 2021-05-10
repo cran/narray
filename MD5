@@ -1,4 +1,4 @@
-0ae7854dfc321536830853b0499c3413 *DESCRIPTION
+db5a791962cad092dfb462dff6c0c910 *DESCRIPTION
 3b83ef96387f14655fc854ddc3c6bd57 *LICENSE
 ab2747f40aefc1ad483cefbc415c4620 *NAMESPACE
 f885aada7c974fa663b48f0c48b86782 *R/bind.r
@@ -23,10 +23,10 @@ aee6886b4a045dca2cfb0b3ab4117e8e *R/stack.r
 cfffe270b5abe36610781384c5962c3a *R/translate.r
 0d3124b3cd7233358e49e3073abe4ae9 *R/util.r
 c6faffa0d19ddf68522cfdec568a7a0c *R/which.r
-e2c153f4a1c28a00365f6555f816976e *build/vignette.rds
-ac3c4cab0842301e2b4ac10bfb68cf64 *inst/doc/narray.R
-4835b0ac96e93e3c9c947d3975498f23 *inst/doc/narray.Rmd
-a3d63d78c1c5acbe962c60758489898f *inst/doc/narray.html
+ebfe3df9054bf9ff5de92cb61dd495fc *build/vignette.rds
+d2e937d6556317b07d00e34ad8d8fdc3 *inst/doc/narray.R
+9dbbb5fde09cbcdbf35e5b2de1928ffb *inst/doc/narray.Rmd
+11aac239fb8720d50cc171065cbf2307 *inst/doc/narray.html
 20388b57ab52aebfebb4b08bc8f2f8d7 *man/bind.Rd
 4783af25c4b0864012625864966ea129 *man/collect.Rd
 a9cbf2145944ff3b87501e258fa391d9 *man/construct.Rd
@@ -74,6 +74,6 @@ c8b44890c668e0b92bebe32db55620bb *vignettes/construct.png
 4f288474924665bd6dab8d4d2a25a37e *vignettes/intersect.png
 28ae65449ea7a9419ede3b02a3ea29ab *vignettes/map.png
 651355967225d2dd766462ba50e62112 *vignettes/mask.png
-4835b0ac96e93e3c9c947d3975498f23 *vignettes/narray.Rmd
+9dbbb5fde09cbcdbf35e5b2de1928ffb *vignettes/narray.Rmd
 24650309f2f7e0ec89c03b82b04ef14f *vignettes/split.png
 fbfe729da927ed9fc80ee4ebc2f949e6 *vignettes/stack.png
