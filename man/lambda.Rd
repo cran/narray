@@ -4,7 +4,8 @@
 \alias{lambda}
 \title{Lambda syntax for array iteration}
 \usage{
-lambda(fml, along, group = c(), simplify = TRUE, envir = parent.frame())
+lambda(fml, along, group = c(), simplify = TRUE, expand_grid = TRUE,
+  envir = parent.frame())
 }
 \arguments{
 \item{fml}{A call prefixed with a tilde}
@@ -14,6 +15,8 @@ lambda(fml, along, group = c(), simplify = TRUE, envir = parent.frame())
 \item{group}{Not implemented}
 
 \item{simplify}{Return array instead of index+result if scalar}
+
+\item{expand_grid}{Use all combinations of indices (default: TRUE)}
 
 \item{envir}{Environment where variables can be found}
 }
