@@ -1,7 +1,7 @@
-f8115023e2cc8a5719345c53f1908fce *DESCRIPTION
+4e02c2eecc3d59565b18a0aa792d9a36 *DESCRIPTION
 3b83ef96387f14655fc854ddc3c6bd57 *LICENSE
 9216984f9d6f167e531e06dc56b9d374 *NAMESPACE
-f65369a03d3980cd0fa193293bad6f0e *NEWS.md
+592cdc1dc0eb4a7cee6644c5f5342b1a *NEWS.md
 ab3de0e0a56ad20f51a9eee8db6d92cc *R/RcppExports.R
 f885aada7c974fa663b48f0c48b86782 *R/bind.r
 e0baf3293be0eb644d2c7b723913b963 *R/collect.r
@@ -22,6 +22,7 @@ c53c7de72fea0357c23a66b3b075558d *R/narray-package.r
 0668ef37b0a0d41d30240b31c599f846 *R/rep.r
 e12e40facff03e414eaa0c1121eb9dc0 *R/split.r
 52c9ec20dbc7a969febb90723aa98cd9 *R/stack.r
+13504caa1591ffcbf6775aa885f1519d *R/stack_old.r
 6594c06130e3c75c3562f095719ab833 *R/subset.r
 2e8ae0503f85d4dde399a619b617ba7c *R/translate.r
 cc4bf9a32b0e517300ccf6758129ba47 *R/util.r
@@ -29,7 +30,7 @@ c6faffa0d19ddf68522cfdec568a7a0c *R/which.r
 c8d6950f45577227dacd14910c6f4c3f *build/vignette.rds
 ff7ae756387f12798b955254cccc2917 *inst/doc/narray.R
 94dc6799205c363dee1a721feba397a7 *inst/doc/narray.Rmd
-a4bec1d1adcad4bffdd2285a91df0472 *inst/doc/narray.html
+39bf147af9a07cd9559ce1b37eebad60 *inst/doc/narray.html
 20388b57ab52aebfebb4b08bc8f2f8d7 *man/bind.Rd
 4783af25c4b0864012625864966ea129 *man/collect.Rd
 a9cbf2145944ff3b87501e258fa391d9 *man/construct.Rd
@@ -61,7 +62,7 @@ ffda9ac63ef76503df1319ec86c58374 *man/stack.Rd
 d65ebd811bf7b59ab1a84f1ada9f6092 *man/vectors_to_row_or_col.Rd
 71551037129f5bb7d578e8f16621667f *man/which.Rd
 c117165401ca548fe7f35e46f10acef0 *src/RcppExports.cpp
-26871519b31f62060d92e3a91bb117d0 *src/stack.cpp
+b2116bb28159ce1713f64522d87580da *src/stack.cpp
 dd1c3b0031129686711c5637a700b999 *tests/testthat.R
 11a062700d54e250c5eed29c98d7a0fb *tests/testthat/test-bind.r
 bdf8f8d184a031e01f8e178f09d2f003 *tests/testthat/test-construct.r
@@ -73,7 +74,7 @@ bc0f41ab23de42ebd884cecea2e93081 *tests/testthat/test-mask.r
 3162d45895c63bd53eed2f98c9cccdac *tests/testthat/test-melt.r
 423892be05f81a4b58b71ada1b0abd26 *tests/testthat/test-rep.r
 6b74b65186398cb8c3a06b861b0cda8c *tests/testthat/test-split.r
-efb370fc0cf9f104edb8f336aa5ee000 *tests/testthat/test-stack.r
+220a91af945458f5ec800367bd88aa97 *tests/testthat/test-stack.r
 d593e966e244b171446a428602f99758 *tests/testthat/test-subset.r
 6c79acfeacf785a6fd06370d9f0d907a *tests/testthat/test-translate.r
 c8b44890c668e0b92bebe32db55620bb *vignettes/construct.png
