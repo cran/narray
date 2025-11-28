@@ -1,8 +1,3 @@
-# git head
-
- * `lambda` is deprecated and syntax is now available from `map` function
- * `map` is now compiled using `Rcpp`
-
 # narray 0.5.1
 
  * Fixed a bug where `stack` made unnecessary vector copies

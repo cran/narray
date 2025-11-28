@@ -18,9 +18,9 @@ opts_chunk$set(
 library(narray)
 
 ## ----namespace, eval=FALSE----------------------------------------------------
-#  # example referencing the package namespace
-#  # do not load the package with 'library(...)' here
-#  narray::stack(...)
+# # example referencing the package namespace
+# # do not load the package with 'library(...)' here
+# narray::stack(...)
 
 ## ----stack--------------------------------------------------------------------
 A = matrix(1:4, nrow=2, ncol=2, dimnames=list(c('a','b'),c('x','y')))
